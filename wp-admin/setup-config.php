@@ -12,7 +12,7 @@
 /**
  * We are installing.
  */
-define( 'WP_INSTALLING', true );
+define( 'WP_INSTALLING', false );
 
 /**
  * We are blissfully unaware of anything.
