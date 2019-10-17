@@ -18,18 +18,23 @@
  * @package WordPress
  */
 
+$wp_db_name = getenv("MYSQL_DB_NAME");
+$wp_db_dbuser = getenv("MYSQL_DB_USER");
+$wp_db_pass = getenv("MYSQL_DB_PASSWORD");
+$wp_db_server = getenv("MYSQL_DB_SERVER");
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wordpress' );
+define( 'DB_NAME', $wp_db_name );
 
 /** MySQL database username */
-define( 'DB_USER', 'wordpress' );
+define( 'DB_USER', $wp_db_dbuser );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'wordpress' );
+define( 'DB_PASSWORD', $wp_db_pass );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'mysql.hpa.svc.cluster.local:3306' );
+define( 'DB_HOST', $wp_db_server );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
